@@ -1,6 +1,8 @@
 import pygame
 import configparser
 
+from physics import Physics
+
 def main() -> None:
     config = configparser.ConfigParser()
     config.read('../settings.ini')
@@ -29,7 +31,7 @@ def main() -> None:
 
 
 def update() -> None:
-    pass
+    Physics()
 
 def render() -> None:
     pass
