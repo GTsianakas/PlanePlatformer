@@ -1,0 +1,5 @@
+mypy @ file:///croot/mypy_1695135164588/work
+mypy-extensions @ file:///croot/mypy_extensions_1695130926492/work
+psutil @ file:///work/ci_py311_2/psutil_1679337388738/work
+pygame==2.5.2
+typing_extensions @ file:///croot/typing_extensions_1690297465030/work
