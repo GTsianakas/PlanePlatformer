@@ -51,7 +51,15 @@ class PhysicsObject:
 
 
 def convert_coords_to_vector(coords: Vector2D) -> tuple:
+    if coords.x == 0 and coords.y == 0:
+        return (0, 0)
     angle = math.atan2(coords.y, coords.x)
-    magnitude = math.sqrt(coords.x**2 + coords.y**2)
-    
+    magnitude = math.sqrt(coords.x ** 2 + coords.y ** 2)
+
     return (angle, magnitude)
+
+
+
+
+
+

@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
-class Movable(ABC):
+class Control(ABC):
     @abstractmethod
-    def move(self) -> None:
+    def control(self) -> None:
         pass
 

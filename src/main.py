@@ -1,6 +1,10 @@
 import pygame
 import configparser
 
+from plane import Plane
+
+p = Plane()
+
 def main() -> None:
     config = configparser.ConfigParser()
     config.read('../settings.ini')
@@ -17,10 +21,10 @@ def main() -> None:
             if event.type == pygame.QUIT:
                 running = False
                 
-        screen.fill("purple")
+        screen.fill("blue")
         update()
         
-        render()
+        render(screen)
 
         pygame.display.flip()
         clock.tick(int(config['GAME']['MAX_FPS']))
@@ -29,10 +33,11 @@ def main() -> None:
 
 
 def update() -> None:
-    pass
+    p.move()
     
-def render() -> None:
-    pass
+def render(screen: pygame.Surface) -> None:
+    rotated_image, image_rect = p.draw(screen)
+    screen.blit(rotated_image, image_rect)
 
 if __name__ == "__main__":
     main()

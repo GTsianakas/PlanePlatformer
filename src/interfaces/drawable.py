@@ -1,7 +1,9 @@
 from abc import ABC, abstractmethod
 
+import pygame
+
 class Drawable(ABC):
     @abstractmethod
-    def draw(self,x:int, y:int, angle:int) -> None:
+    def draw(self, screen: pygame.Surface) -> tuple:
         pass
     
